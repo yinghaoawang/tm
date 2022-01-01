@@ -93,7 +93,7 @@ const solveCaptcha = async(base64, captchaApiKey) => {
 		GM.xmlHttpRequest(opts);
 		//console.log('end');
 	});
-	res = await getCaptchaResultRetry(res.taskId, 30000);
+	res = await getCaptchaResultRetry(res.taskId, captchaApiKey, 30000);
 
 	return res.text;
 };
