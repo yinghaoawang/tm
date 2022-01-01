@@ -135,3 +135,8 @@ const writeToLocalStorage = () => {
 	console.log('writing', JSON.stringify(allPokemonCaught));
 	localStorage.setItem('tppcPokemonCaught', JSON.stringify(allPokemonCaught));
 }
+
+
+export {
+	writeToLocalStorage
+};
