@@ -17,7 +17,6 @@ const getBase64FromUrl = async (url) => {
 
 const getCaptchaResultRetry = async (taskId, captchaApiKey, timeout=30000) => {
 	let startTime = new Date(Date.now()).getTime();
-	//console.log(startTime);
 
 	let body = {
 		clientKey: captchaApiKey,
@@ -26,7 +25,6 @@ const getCaptchaResultRetry = async (taskId, captchaApiKey, timeout=30000) => {
 	
 
 	const doThis = async () => {
-		//console.log("doing this");
 		let res = await new Promise((resolve, reject) => {
 			let opts = {
 				method: "POST",
@@ -92,7 +90,6 @@ const solveCaptcha = async(base64, captchaApiKey) => {
 		};
 		console.log('opt', opts);
 		GM.xmlHttpRequest(opts);
-		//console.log('end');
 	});
 	res = await getCaptchaResultRetry(res.taskId, captchaApiKey, 30000);
 
