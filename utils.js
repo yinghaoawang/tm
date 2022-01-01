@@ -1,4 +1,4 @@
-
+const siteUrl = 'https://www.tppcrpg.net/';
 const captchaSolverEndpoint = 'https://api.capmonster.cloud/createTask';
 const captchaSolutionGetterEndpoint = 'https://api.capmonster.cloud/getTaskResult';
 
