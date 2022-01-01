@@ -115,3 +115,23 @@ const urlContains = (suffix) => {
 	let index = window.location.href.indexOf('.net') + 4;
 	return window.location.href.includes(suffix, index);
 }
+
+const sleep = (ms) => {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const sleepRange = (min, max) => {
+	return new Promise(resolve => setTimeout(resolve, Math.random() * (max-min) + min));
+}
+
+let allPokemonCaught = null;
+const fetchFromLocalStorage = () => {
+	if (!localStorage.getItem('tppcPokemonCaught'))
+		localStorage.setItem('tppcPokemonCaught', JSON.stringify({}));
+	allPokemonCaught = JSON.parse(localStorage.getItem('tppcPokemonCaught'));
+	console.log(allPokemonCaught);
+}
+const writeToLocalStorage = () => {
+	console.log('writing', JSON.stringify(allPokemonCaught));
+	localStorage.setItem('tppcPokemonCaught', JSON.stringify(allPokemonCaught));
+}
