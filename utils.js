@@ -23,6 +23,7 @@ const getCaptchaResultRetry = async (taskId, captchaApiKey, timeout=30000) => {
 		clientKey: captchaApiKey,
 		taskId: taskId,
 	}
+	
 
 	const doThis = async () => {
 		//console.log("doing this");
