@@ -127,9 +127,9 @@ const fetchFromLocalStorage = () => {
 	if (!localStorage.getItem('tppcPokemonCaught'))
 		localStorage.setItem('tppcPokemonCaught', JSON.stringify({}));
 	allPokemonCaught = JSON.parse(localStorage.getItem('tppcPokemonCaught'));
-	console.log(allPokemonCaught);
+	//console.log(allPokemonCaught);
 }
 const writeToLocalStorage = () => {
-	console.log('writing', JSON.stringify(allPokemonCaught));
+	//console.log('writing', JSON.stringify(allPokemonCaught));
 	localStorage.setItem('tppcPokemonCaught', JSON.stringify(allPokemonCaught));
 }
